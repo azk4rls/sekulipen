@@ -47,8 +47,8 @@
                             
                             {{-- Tombol Detail didorong ke posisi paling bawah --}}
                             <div class="mt-auto">
-                                <a href="#" class="btn btn-outline-primary w-100 fw-bold shadow-sm">
-                                    Lihat Detail Heninya
+                                <a href="{{ route('event.show', $event->id) }}" class="btn btn-outline-primary w-100 fw-bold shadow-sm">
+                                    Lihat Detail Acara
                                 </a>
                             </div>
                         </div>
