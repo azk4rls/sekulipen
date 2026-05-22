@@ -18,4 +18,13 @@ class FrontEndController extends Controller
         // Serahkan data tersebut ke halaman depan bernama 'welcome'
         return view('welcome', compact('events'));
     }
+
+    /**
+     * Menampilkan halaman detail acara.
+     */
+    public function show($id)
+    {
+        $event = Event::with('category')->findOrFail($id);
+        return view('event_detail', compact('event'));
+    }
 }
